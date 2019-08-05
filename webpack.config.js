@@ -1,6 +1,6 @@
 const path = require('path');
 // const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /*
  * SplitChunksPlugin is enabled by default and replaced
@@ -23,9 +23,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
  *
  */
 
-
 module.exports = {
-
     devtool: 'cheap-module-eval-source-map',
 
     devServer: {
@@ -44,45 +42,31 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(j|t)sx?$/,
                 include: [path.resolve(__dirname, 'src')],
                 loader: 'babel-loader',
-
-                // options: {
-                //     presets: [
-                //         [
-                //             '@babel/preset-env',
-                //             {
-                //                 modules: false,
-                //             },
-                //         ],
-                //         '@babel/preset-react',
-                //     ],
-                // },
-
-                test: /\.(j|t)sx?$/,
             },
             {
                 test: /\.s?css$/,
-
                 use: [
                     {
-                        loader: 'style-loader'
+                        loader: 'style-loader',
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
                     },
                     {
-                        loader: 'sass-loader'
+                        loader: 'sass-loader',
                     },
                 ],
             },
         ],
     },
 
-    // output: {
-    //     chunkFilename: '[name].[chunkhash].js',
-    //     filename: '[name].[chunkhash].js'
-    // },
+    output: {
+        chunkFilename: '[name].[chunkhash].js',
+        filename: '[name].[chunkhash].js',
+    },
 
     mode: 'development',
 
@@ -90,7 +74,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: true,
             template: path.resolve(__dirname, './index.html'),
-        })
+        }),
     ],
 
     optimization: {
@@ -98,14 +82,13 @@ module.exports = {
             cacheGroups: {
                 vendors: {
                     priority: -10,
-                    test: /[\\/]node_modules[\\/]/
-                }
+                    test: /[\\/]node_modules[\\/]/,
+                },
             },
-
             chunks: 'async',
             minChunks: 1,
             minSize: 30000,
-            name: true
-        }
-    }
+            name: true,
+        },
+    },
 };
