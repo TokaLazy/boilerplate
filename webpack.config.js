@@ -64,8 +64,8 @@ module.exports = {
     },
 
     output: {
-        chunkFilename: '[name].[chunkhash].js',
-        filename: '[name].[chunkhash].js',
+        chunkFilename: '[name].[hash].js',
+        filename: '[name].[hash].js',
     },
 
     mode: 'development',
