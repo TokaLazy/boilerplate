@@ -6,6 +6,6 @@
     ],
     "plugins": [
         "@babel/plugin-syntax-typescript",
-        "@babel/plugin-proposal-optional-chaining",
+        "@babel/plugin-transform-runtime"
     ]
 }

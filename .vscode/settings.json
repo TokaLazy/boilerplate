@@ -5,24 +5,24 @@
         "javascriptreact",
         {
             "language": "typescript",
-            "autoFix": true,
+            "autoFix": true
         },
         {
             "language": "typescriptreact",
-            "autoFix": true,
+            "autoFix": true
         }
     ],
     "editor.formatOnSave": true,
     "[javascript]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": false
     },
     "[javascriptreact]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": false
     },
     "[typescript]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": false
     },
     "[typescriptreact]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": false
     }
 }
