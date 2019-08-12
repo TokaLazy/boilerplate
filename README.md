@@ -1,9 +1,10 @@
 # Boilerplate
 
-- [x] webpack
-- [x] babel
-- [x] eslint
-- [x] prettier
-- [x] vscode settings
-- [x] editorconfig
-- [x] typescript
+-   [x] vscode settings
+-   [x] editorconfig
+-   [x] babel
+-   [x] webpack
+-   [x] eslint
+-   [ ] tslint instead eslint
+-   [x] prettier
+-   [x] typescript
